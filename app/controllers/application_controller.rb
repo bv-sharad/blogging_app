@@ -15,4 +15,10 @@ class ApplicationController < ActionController::Base
       @current_name ||= session[:email]
     end
   end
+	 def is_admin
+		 if session[:user_id]
+      #@current_user ||= User.find(session[:user_id])
+      @is_admin ||= session[:is_admin]
+    end
+	 end
 end

@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "You've signed in."
       session[:user_id] = @user.id
 			session[:email] = @user.email
+			session[:is_admin] = @user.is_admin
       redirect_to "/"
     else
       flash[:alert] = "There was a problem signing in. Please try again."
