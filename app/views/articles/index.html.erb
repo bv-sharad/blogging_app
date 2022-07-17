@@ -1,9 +1,11 @@
 <body>
-    <% if current_user %>
-      <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
+     <% if  u_signed_in? %>
+      <%= link_to "Hi, #{current_u.email}", edit_u_registration_path %> | <%= link_to 'Sign Out', destroy_u_session_path, method: :delete %>
     <% else %>
-      <%= link_to "Sign up", '/signup' %> | <%= link_to "Sign in", '/signin' %>
-    <% end %>
+      <h2>You're Logged out!</h2>
+      <%= link_to "Sign up", new_u_registration_path %> | <%= link_to "Sign in",  new_u_session_path %>
+   
+   <% end %>
 
     <%= yield %>
   </body>

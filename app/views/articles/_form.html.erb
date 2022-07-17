@@ -1,5 +1,5 @@
 <%= form_with model: article do |form| %>
-	<%= form.text_field :user , :readonly => true, value: current_name %>
+	<%= form.text_field :user , :readonly => true, value: current_u.email %>
 	<div class="form-style-9">
     <%= form.label :title %><br>
     <%= form.text_field :title %>
