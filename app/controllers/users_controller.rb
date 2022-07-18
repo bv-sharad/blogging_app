@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       flash[:notice] = "You've successfully signed up!"
       session[:user_id] = @user.id
 			session[:email] = @user.email
+			session[:is_admin] = @user.is_admin
       redirect_to "/"
     else
       flash[:al] = "There was a problem signing up."
@@ -19,6 +20,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :is_admin)
   end
 end

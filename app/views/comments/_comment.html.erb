@@ -10,7 +10,7 @@
   <%= comment.body %>
    </div>
 
-	 <% if current_name == @article.user %>
+	 <% if current_name == @article.user || current_user.is_admin%>
   <div>
   <%= link_to "Destroy Comment", [comment.article, comment], data: {
                 method: :delete,

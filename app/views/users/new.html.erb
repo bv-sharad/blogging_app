@@ -13,6 +13,10 @@
   <%= f.label :password_confirmation %>
 	<%= f.password_field :password_confirmation %>
 	</p>
+	 <p>
+  <%= f.label :is_admin %><br>
+  <%= f.text_field :is_admin, :readonly=> true,  value: false %>
+  </p>
 	<p>
 	<%= f.submit "Sign Up" %>
 	</p>
