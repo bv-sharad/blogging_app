@@ -1,7 +1,7 @@
 <div class="form-style-9">
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -21,7 +21,7 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-   <div>
+  <div>
   <%= f.label :admin %><br>
   <%= f.text_field :admin, :readonly=> true,  value: true %>
   </div>
