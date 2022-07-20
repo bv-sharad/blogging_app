@@ -1,7 +1,7 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <div class="form-style-9">
 	<%= form.label :commenter %><br>
-	<%= form.text_field :commenter, :disabled => false, :readonly=> true,  value: current_name %>
+	<%= form.text_field :commenter, :disabled => false, :readonly=> true,  value: current_u.email %>
 	</div>
   <div class="form-style-9">
     <%= form.label :body %><br>
